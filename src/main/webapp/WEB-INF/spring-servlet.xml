@@ -18,9 +18,9 @@
     <mvc:annotation-driven/>
 
     <!-- Scan for @Controller classes -->
-    <context:component-scan base-package="com.example.*"/>
-    <bean id="securityConfig" class="com.example.security.SecurityConfig"/>
-
+    <context:component-scan base-package="com.example.idp.*"/>
+<!--     <bean id="securityConfig" class="com.example.idp.security.SecurityConfig"/>
+ -->
     
 
 </beans>

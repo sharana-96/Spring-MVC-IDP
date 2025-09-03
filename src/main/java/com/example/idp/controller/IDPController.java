@@ -1,4 +1,4 @@
-package com.example.controller;
+package com.example.idp.controller;
 
 import org.springframework.security.core.Authentication;
 import org.springframework.security.oauth2.jwt.Jwt;
@@ -9,13 +9,13 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/api/secure")
-public class HelloController {
+public class IDPController {
 
-	@GetMapping("/hello")
+	@GetMapping("/idp")
 	public String hello(Authentication authentication) {
 	    Jwt jwt = (Jwt) authentication.getPrincipal();
 	    String username = jwt.getClaim("unique_name");
 	    System.out.println(jwt.getTokenValue());
-	    return "Hello " + username + " from Spring MVC secured API";
+	    return "Hello " + username + " from Spring MVC IDP secured API";
 	}
 }
